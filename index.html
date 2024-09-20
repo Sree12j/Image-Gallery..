@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagegallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img src="images/back.png" id="backbtn">
+        <div class="gallery">
+            <div>
+                <span><img src="images/image1.jpeg"></span>
+                <span><img src="images/image2.jpg" ></span>
+                <span><img src="images/image3.png" ></span>
+            </div>
+            <div>
+                <span><img src="images/image4.jpeg" ></span>
+                <span><img src="images/image-5.png" ></span>
+                <span><img src="images/image-6.png" ></span>
+            </div>
+            <div>
+                <span><img src="images/image7.png" ></span>
+                <span><img src="images/image8.png"></span>
+                <span><img src="images/image9.png"></span>
+            </div>
+        </div>
+        <img src="images/next.png" id="nextbtn">
+    </div>
+    <script>
+        let scrollBar=document.querySelector('.gallery');
+        let backBtn=document.getElementById('backbtn');
+        let nextBtn=document.getElementById('nextbtn');
+        nextBtn.addEventListener("click",()=>{
+            scrollBar.style.scrollBehavior="smooth";
+            scrollBar.scrollLeft += 900;
+        });
+        backBtn.addEventListener("click",()=>{
+          scrollBar.style.scrollBehavior="smooth";
+            scrollBar.scrollLeft -= 900;
+        });
+        
+    </script>
+</body>
+</html>
